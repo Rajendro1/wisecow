@@ -15,10 +15,9 @@ COPY . .
 # Install bash (Ubuntu comes with bash, so this step is not strictly necessary)
 # Update apt package list and install fortune-mod and cowsay
 RUN apt-get update && \
-    apt install fortune-mod cowsay -y 
-    # && \
+    apt install fortune-mod cowsay -y && \
     # Clean up the apt cache to reduce image size
-    # rm -rf /var/lib/apt/lists/*
+    rm -rf /var/lib/apt/lists/*
 
 # Make sure the script is executable
 RUN chmod +x wisecow.sh
