@@ -17,7 +17,7 @@ jobs:
       uses: redhat-actions/podman-login@v1
       with:
         registry: ${{ env.IMAGE_REGISTRY }}
-        username: ${{ secrets.DOCKER_USERNAME }}
+        username: rajendro1
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Build the Podman image
