@@ -7,12 +7,19 @@ WORKDIR /usr/src/app
 # Copy the current directory contents into the container at /usr/src/app
 COPY . .
 
+# Install bash (if needed for your scripts)
+RUN apk add --no-cache bash
+
+# Enable community repository and install cowsay
+# Attempt to install fortune (if available)
+RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories && \
+    apk update && \
+    apk add --no-cache cowsay
+
+# Since fortune is not typically available in the Alpine repos, you might need to skip this or find an alternative method
+
 # Make sure the script is executable
 RUN chmod +x wisecow.sh
-
-# Install any needed packages specified in requirements.txt
-# Uncomment and modify the following line if you have dependencies
-# RUN apk add --no-cache <your-package-list-here>
 
 # Run wisecow.sh when the container launches
 CMD ["./wisecow.sh"]
