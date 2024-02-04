@@ -1,7 +1,7 @@
 # kubectl create secret docker-registry github-regcred \
 #   --docker-server=ghchcr.io \
 #   --docker-username=rajendro1 \
-#   --docker-password= \
+#   --docker-password=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 \
 #   --docker-email=rajandroprosad@gmail.com
 ---
 apiVersion: apps/v1
