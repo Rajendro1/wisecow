@@ -22,5 +22,6 @@ RUN apt-get update && \
 # Make sure the script is executable
 RUN chmod +x wisecow.sh
 
+EXPOSE 4499
 # Run wisecow.sh when the container launches
 CMD ["./wisecow.sh"]
