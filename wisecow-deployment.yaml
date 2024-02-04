@@ -24,4 +24,4 @@ spec:
       - name: wisecow
         image: ghcr.io/rajendro1/wisecow:main
         ports:
-        - containerPort: 443
+        - containerPort: 4499
