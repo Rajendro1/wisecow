@@ -18,7 +18,7 @@ jobs:
       with:
         registry: ${{ env.IMAGE_REGISTRY }}
         username: rajendro1
-        password: ${{ secrets.DOCKER_PASSWORD }}
+        password: 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
 
     - name: Build the Podman image
       run: |
