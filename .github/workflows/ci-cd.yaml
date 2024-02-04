@@ -22,8 +22,8 @@ jobs:
 
     - name: Build the Podman image
       run: |
-        podman build . --tag ghcr.io/${{ secrets.DOCKER_USERNAME }}/wisecow:$(basename ${{ github.ref }}) -f Dockerfile
-        podman push ghcr.io/${{ secrets.DOCKER_USERNAME }}/wisecow:$(basename ${{ github.ref }})
+        podman build . --tag ghcr.io/Rajendro1/wisecow:$(basename ${{ github.ref }}) -f Dockerfile
+        podman push ghcr.io/Rajendro1/wisecow:$(basename ${{ github.ref }})
 
   # deploy:
   #   needs: build-and-push
